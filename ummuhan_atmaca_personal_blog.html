@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ümmühan Atmaca — Kişisel Blog</title>
+  <meta name="description" content="Ümmühan Atmaca'nın kişisel blogu — projeler, etkinlikler, hedefler ve iletişim" />
+  <style>
+    :root{
+      --bg1: #ff9ecb; /* pembe */
+      --bg2: #c9a0ff; /* lila */
+      --bg3: #8b5cf6; /* mor */
+      --card: rgba(255,255,255,0.9);
+      --glass: rgba(255,255,255,0.08);
+      --accent: rgba(255,255,255,0.12);
+      --maxw: 1100px;
+      --radius: 14px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));color:#1a0b2e}
+    .wrap{max-width:var(--maxw);margin:32px auto;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.06));border-radius:20px;backdrop-filter: blur(6px);box-shadow:0 8px 30px rgba(0,0,0,0.18)}
+
+    /* NAV */
+    nav{display:flex;gap:12px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;display:grid;place-items:center;font-weight:700;color:white;background:linear-gradient(135deg,rgba(255,255,255,0.18),rgba(255,255,255,0.04));box-shadow:inset 0 -6px 18px rgba(0,0,0,0.12)}
+    .brand h1{font-size:1.1rem;margin:0}
+    .navlinks{display:flex;gap:10px}
+    .navlinks a{padding:8px 14px;border-radius:10px;text-decoration:none;color:white;background:transparent;font-weight:600}
+    .navlinks a:hover{background:var(--accent)}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:center;margin-top:20px}
+    .intro{padding:18px;border-radius:var(--radius);background:linear-gradient(180deg,rgba(255,255,255,0.95),rgba(255,255,255,0.9))}
+    .intro h2{margin-top:0;color:var(--bg3)}
+    .intro p{line-height:1.5}
+    .cta{display:flex;gap:8px;margin-top:12px}
+    .btn{padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn-primary{background:var(--bg3);color:white}
+    .btn-ghost{background:transparent;border:2px solid rgba(0,0,0,0.06)}
+
+    .sidecard{border-radius:16px;padding:16px;background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));min-height:140px}
+
+    /* skills + projects */
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
+    .card{background:var(--card);border-radius:12px;padding:16px}
+    .skills ul{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+    .skills li{background:linear-gradient(90deg,rgba(255,255,255,0.85),rgba(255,255,255,0.78));padding:8px 10px;border-radius:10px;font-weight:600}
+
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .project{border-radius:12px;overflow:hidden;background:var(--glass);padding:0}
+    .project img{width:100%;height:160px;object-fit:cover;display:block}
+    .proj-body{padding:12px}
+
+    /* Events gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px}
+
+    /* Video container */
+    .video-wrap{border-radius:12px;overflow:hidden}
+    .video-wrap iframe,.video-wrap video{width:100%;height:320px;border:0;display:block}
+
+    /* FOOTER */
+    footer{margin-top:20px;padding:16px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02));display:flex;justify-content:space-between;align-items:center}
+    footer .left{font-weight:600}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .grid2{grid-template-columns:1fr}
+      .projects{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .navlinks{display:none}
+    }
+
+    /* small helper */
+    .muted{color:#4a2f5f;font-weight:600}
+    a.external{color:var(--bg3);text-decoration:underline}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="brand">
+        <div class="logo">ÜA</div>
+        <div>
+          <h1>Ümmühan Atmaca</h1>
+          <div class="muted">Siber Güvenlik &amp; Yazılım</div>
+        </div>
+      </div>
+      <div class="navlinks">
+        <a href="#about">Hakkımda</a>
+        <a href="#projects">Projeler</a>
+        <a href="#events">Etkinlikler</a>
+        <a href="#contact">İletişim</a>
+        <a href="https://www.linkedin.com/in/%C3%BCmm%C3%BChan-atmaca " target="_blank" rel="noopener" class="external">LinkedIn</a>
+      </div>
+    </nav>
+
+    <section class="hero" id="top">
+      <div class="intro">
+        <h2>Merhaba — Ben Ümmühan</h2>
+        <p>Bilgisayar Mühendisliği öğrencisi,siber güvenlik ve açık kaynak meraklısıyım. Öğrenci topluluklarında aktif olarak etkinlikler düzenliyorum, eğitimler veriyorum ve projeler geliştiriyorum. Aşağıda neler yaptığımı, becerilerimi ve hedeflerimi görebilirsiniz.Şimdiden teşekkür ederim.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#projects">Projelerime Bak</a>
+          <a class="btn btn-ghost" href="#events">Etkinlik Fotoğrafları</a>
+        </div>
+      </div>
+
+      <aside class="sidecard">
+        <h3>Kısa Bilgiler</h3>
+        <p><strong>Bölüm:</strong> Bilgisayar Mühendisliği (3. sınıf)</p>
+        <p><strong>İlgilenilen Alanlar:</strong> Adli Bilişim, CTI , Linux Çekirdek Geliştiriciliği ve Güvenliği, Blokzincir</p>
+        <p style="margin-top:8px"><strong>Beni LinkedIn'de takip edebilirsiniz:</strong><br>
+          <a href="https://www.linkedin.com/in/%C3%BCmm%C3%BChan-atmaca " target="_blank" rel="noopener" class="external">LinkedIn Profili</a>
+        </p>
+      </aside>
+    </section>
+
+    <div class="grid2">
+      <section id="about" class="card">
+        <h3>Hakkımda &amp; Hedefler</h3>
+        <p>Şu ana kadar düzenlediğim eğitimler, katıldığım hackathon'lar ve geliştirdiğim projeler (örneğin BlokÇek, TravelGuard, Kernel Modül Geliştirme) sayesinde hem teorik hem pratik deneyim kazandım. Gelecekte hedefim, güvenli yazılım geliştirme ve açık kaynak güvenlik araçları üzerine daha fazla katkı sağlamak Ayrıca ülkemizin siber güvenlik dünyasındaki gücünü daha da arttıracak projeler üzerine çalışmak istiyorum.</p>
+        <h4>Neler Yapıyorum?</h4>
+        <ul>
+          <li>Okulumuzda bulunan Adli Bilişim ve Tehdit İstihbaratı topluluğunda 1 sene boyunca başkan yardımcılığı yaptım. Toplulukta bulunduğum süre boyunca bu alanda eğitimler hazırlayıp, projelere katıldım.</li>
+          <li> Blokzincir tabanlı projeler üzerine çalışma yaptım.</li>
+          <li>Linux kernel güvenliği ve hardening üzerinde çalışmalar yaparak kendimi geliştiriyorum ve bu alanlar üzerine eğitmenlik yapıyorum</li>
+        </ul>
+      </section>
+
+      <section class="card skills">
+        <h3>Beceriler</h3>
+        <ul>
+    
+          <li>Python (OSINT, otomasyon)</li>
+          <li>Adli Bilişim / CTI &amp; Wireshark</li>
+          <li>Linux Kernel / Secure Boot / TPM</li>
+          <li>Web: HTML/CSS/JS</li>
+        </ul>
+
+        <h4 style="margin-top:14px">İletişim</h4>
+        <p id="contact">E-posta: <a href="mailto:ummuhanatmaca8@gmail.com">ummuhanatmaca8@gmail.com</a><br>
+        Telefon: <strong>0 (551) 598 2268</strong> </p>
+      </section>
+    </div>
+
+    <section id="projects" style="margin-top:18px">
+      <h3>Projelerim</h3>
+      <div class="projects">
+        <article class="project">
+          <div class="proj-body">
+            <h4>TravelGuard</h4>
+            <p>TravelGuard, seyahat sırasında kullanıcıların güvenliğini izleyen, riskleri tespit eden ve acil durumlarda hızlı müdahale sağlayan akıllı bir güvenlik sistemidir</p>
+            <a href="#" onclick="alert('Tanım: Seyahat güvenliği ve izleme amaçlı bir sistem/proje.</n>
+Amaç: Seyahat sırasında kişilerin güvenliğini artırmak, acil durumlarda hızlı müdahale sağlamak.</n>
+Nasıl çalışır:</n>
+Kullanıcının konumu ve seyahat planları güvenli bir şekilde izlenir.</n>
+Tehdit algılama veya riskli durumlarda anlık uyarılar gönderilir.</n>
+Seyahat sırasında karşılaşılabilecek olaylara karşı önlem ve rehberlik sağlar.</n>
+Teknoloji: IoT cihazları, konum izleme, veri analitiği ve risk tahmin algoritmaları.</n>');return false;">Detayları Gör</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="proj-body">
+            <h4>BlokÇek</h4>
+            <p>Çek dolandırıcılığını önlemeye yönelik blokzincir tabanlı bir çözüm. Akıllı sözleşmeler ile işlem doğrulama sağlar.</p>
+            <a href="#" onclick="alert('Tanım: Blokzincir tabanlı bir çek dolandırıcılığını önleme sistemi. </n>
+Amaç: Çek işlemlerini şeffaf ve güvenilir bir şekilde takip ederek dolandırıcılık riskini minimize etmek.</n>
+Nasıl çalışır:</n>
+Her çek işlemi blokzincire kaydedilir ve değiştirilemez.</n>
+İşlem geçmişi herkes tarafından doğrulanabilir.</n>
+Dolandırıcılık tespit edildiğinde, sistem üzerinden hızlı bir şekilde aksiyon alınabilir.</n>
+Teknoloji: Blokzincir altyapısı, akıllı sözleşmeler, kimlik doğrulama sistemleri.</n>');return false;">Detayları Gör</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="events" style="margin-top:18px">
+      <h3>Katıldığım / Düzenlediğim Etkinlikler</h3>
+      <p>Etkinliklerden seçtiğim bazı fotoğraflar ve açıklamaları:</p>
+      <div class="gallery">
+        <figure>
+          <img src="etkinlik1.jpeg" alt="Etkinlik 1">
+          <figcaption>SiberVatan öğrencilik sürecim - 2024, Ankara</figcaption>
+        </figure>
+        <figure>
+          <img src="etkinlik2.jpeg" alt="Etkinlik 2">
+          <figcaption> LKD Blokzincir Kamp sürecim - 2025, Eskişehir</figcaption>
+        </figure>
+        <figure>
+          <img src="etkinlik3.jpeg" alt="Etkinlik 3">
+          <figcaption>Sibervatan Linux Çekirdek Geliştiriciliği ve Linux Hardening Eğitmenlik Sürecim - 2025, Antalya</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <footer>
+      <div class="left">&copy; Ümmühan Atmaca — 0 (551) 598 2268</div>
+      <div>Kişisel Blog — <a href="#top" class="external">Ümmühan'ın Blogu</a></div>
+    </footer>
+  </div>
+
+  <script>
+  
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      });
+    });
+  </script>
+
+  
+</body>
+</html>
